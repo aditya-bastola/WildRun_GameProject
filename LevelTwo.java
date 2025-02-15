@@ -591,7 +591,7 @@ public class LevelTwo extends JPanel implements KeyListener, ActionListener
 						sprite1 = new Sprite (SPRITE_SIZE/2 + n*SPRITE_SIZE,SPRITE_SIZE/2 + m*SPRITE_SIZE,0,0,SPRITE_SIZE,SPRITE_SIZE,bluePortalArray[0]);
 						sprite1.setEntryPortal(true);
 
-						System.out.println("51portal n: " + n);
+						//System.out.println("51portal n: " + n);
 						// portal 1
 						
 						entryPortalArrayList.add(sprite1);
@@ -604,7 +604,7 @@ public class LevelTwo extends JPanel implements KeyListener, ActionListener
 						sprite1 = new Sprite (SPRITE_SIZE/2 + n*SPRITE_SIZE,SPRITE_SIZE/2 + m*SPRITE_SIZE,0,0,SPRITE_SIZE,SPRITE_SIZE,bluePortalArray[1]);
 
 
-						System.out.println("52portal n: " + n);
+						//System.out.println("52portal n: " + n);
 
 						if (n == 130) {
 							sprite1.setEntryPortal(true);
@@ -627,12 +627,12 @@ public class LevelTwo extends JPanel implements KeyListener, ActionListener
 						sprite1 = new Sprite (SPRITE_SIZE/2 + n*SPRITE_SIZE,SPRITE_SIZE/2 + m*SPRITE_SIZE,0,0,SPRITE_SIZE,SPRITE_SIZE,bluePortalArray[2]);
 
 
-						System.out.println("level 253portal n: " + n);
+						//System.out.println("level 253portal n: " + n);
 
 						// portal 2
 						if (n == 50) {
 							sprite1.setEntryPortal(true);
-							System.out.println("2ndportal");
+							//System.out.println("2ndportal");
 							sprite1.setPortalX(51 * 50);
 							sprite1.setPortalY(3 * 50);
 							sprite1.setPlayerPortalX_velocity(0);
@@ -656,7 +656,7 @@ public class LevelTwo extends JPanel implements KeyListener, ActionListener
 						sprite1 = new Sprite (SPRITE_SIZE/2 + n*SPRITE_SIZE,SPRITE_SIZE/2 + m*SPRITE_SIZE,0,0,SPRITE_SIZE,SPRITE_SIZE,bluePortalArray[3]);
 						sprite1.setEntryPortal(true);
 
-						System.out.println("portal n: " + n);
+						//System.out.println("portal n: " + n);
 						
 						
 						if (n == 81 || n == 82) {
@@ -683,15 +683,15 @@ public class LevelTwo extends JPanel implements KeyListener, ActionListener
 					}
 					if (csvArray [m] [n] == 56) { // player come out portal - vertical - right
 						sprite1 = new Sprite (SPRITE_SIZE/2 + n*SPRITE_SIZE,SPRITE_SIZE/2 + m*SPRITE_SIZE,0,0,SPRITE_SIZE,SPRITE_SIZE,redPortalArray[1]);
-						System.out.println("56 n: " + n);
+						//System.out.println("56 n: " + n);
 					}
 					if (csvArray [m] [n] == 57) { // player come out portal - horizontal - up receiving
 						sprite1 = new Sprite (SPRITE_SIZE/2 + n*SPRITE_SIZE,SPRITE_SIZE/2 + m*SPRITE_SIZE,0,0,SPRITE_SIZE,SPRITE_SIZE,redPortalArray[2]);
-						System.out.println("57 n: " + n);
+						//System.out.println("57 n: " + n);
 					}
 					if (csvArray [m] [n] == 58) { // player come out portal - horizontal - down come out
 						sprite1 = new Sprite (SPRITE_SIZE/2 + n*SPRITE_SIZE,SPRITE_SIZE/2 + m*SPRITE_SIZE,0,0,SPRITE_SIZE,SPRITE_SIZE,redPortalArray[3]);
-						System.out.println("58 n: " + n);
+						//System.out.println("58 n: " + n);
 					}
 
 
@@ -1002,7 +1002,7 @@ public class LevelTwo extends JPanel implements KeyListener, ActionListener
 				GRAVITY = 1;
 
 
-				System.out.println("yv" + p1.getY_velocity());
+				//System.out.println("yv" + p1.getY_velocity());
 			}
 
 
@@ -1185,7 +1185,7 @@ public class LevelTwo extends JPanel implements KeyListener, ActionListener
 
 			}
 			if ((collided.isPortal())) {
-				System.out.println("portal");
+				//System.out.println("portal");
 				spriteArrayList.remove(collided);
 				gameOver = true;
 			}
@@ -1211,7 +1211,7 @@ public class LevelTwo extends JPanel implements KeyListener, ActionListener
 
 					deadCounter = 0;
 					deadAnimation = true;
-					System.out.println("deadX: " +  p1.getx_center() + "deadY: " +  p1.gety_center());
+				//	System.out.println("deadX: " +  p1.getx_center() + "deadY: " +  p1.gety_center());
 					deadX = p1.getLeft();
 					deadY = p1.getTop();
 					bloodCounter = 0;
@@ -1221,7 +1221,7 @@ public class LevelTwo extends JPanel implements KeyListener, ActionListener
 
 					enemyContact = true;
 					//lives--;
-					System.out.println("EnemyContact");
+					//System.out.println("EnemyContact");
 					//p1.setx_center(p1.get);
 					p1.setJetpack(false);
 				}
@@ -1237,12 +1237,12 @@ public class LevelTwo extends JPanel implements KeyListener, ActionListener
 				if (collided.getPlayerPortalX_velocity() != 100)
 				{
 					p1.setX_velocity(collided.getPlayerPortalX_velocity());
-					System.out.println("portal xv: " + collided.getPlayerPortalX_velocity());
+					//System.out.println("portal xv: " + collided.getPlayerPortalX_velocity());
 				}
 				if (collided.getPlayerPortalY_velocity() != 100)
 				{
 					p1.setY_velocity(collided.getPlayerPortalY_velocity());
-					System.out.println("portal yv: " + collided.getPlayerPortalY_velocity());
+					//System.out.println("portal yv: " + collided.getPlayerPortalY_velocity());
 
 				}
 			}
@@ -1344,7 +1344,7 @@ public class LevelTwo extends JPanel implements KeyListener, ActionListener
 
 					
 
-					System.out.println("EnemyContact");
+					//System.out.println("EnemyContact");
 
 					//p1.setx_center(100);
 
@@ -1365,12 +1365,12 @@ public class LevelTwo extends JPanel implements KeyListener, ActionListener
 				if (collided.getPlayerPortalX_velocity() != 100)
 				{
 					p1.setX_velocity(collided.getPlayerPortalX_velocity());
-					System.out.println("portal xv: " + collided.getPlayerPortalX_velocity());
+				//	System.out.println("portal xv: " + collided.getPlayerPortalX_velocity());
 				}
 				if (collided.getPlayerPortalY_velocity() != 100)
 				{
 					p1.setY_velocity(collided.getPlayerPortalY_velocity());
-					System.out.println("portal yv: " + collided.getPlayerPortalY_velocity());
+					//System.out.println("portal yv: " + collided.getPlayerPortalY_velocity());
 
 				}
 

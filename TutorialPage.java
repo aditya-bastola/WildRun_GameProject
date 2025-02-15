@@ -88,7 +88,7 @@ public class TutorialPage extends JPanel implements ActionListener
 		
 		updateText();
 		
-		System.out.println(jumpCounter);
+		
 		
 		
 	}
