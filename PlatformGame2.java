@@ -1,5 +1,4 @@
 // Aditya Bastola
-// 5 / 2 / 22
 // PlatformGame.java
 
 import javax.swing.*;
